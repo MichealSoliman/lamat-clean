@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لمعة كلين - آراء العملاء</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #6b7b8c;
+            --accent: #8a9a8c;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+        }
+        
+        .testimonial-item {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(74, 111, 165, 0.1);
+        }
+        
+        .testimonial-header {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-header:hover {
+            background: rgba(74, 111, 165, 0.02);
+        }
+        
+        .testimonial-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            background: #fafbfc;
+        }
+        
+        .testimonial-item.active .testimonial-content {
+            max-height: 500px;
+            padding: 0 24px 24px;
+        }
+        
+        .testimonial-arrow {
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-item.active .testimonial-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .stars-rating {
+            color: #fbbf24;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-text {
+            line-height: 1.8;
+            color: #4b5563;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(74, 111, 165, 0.1);
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            line-height: 1;
+        }
+        
+        .floating-testimonials {
+            position: relative;
+        }
+        
+        .floating-card {
+            position: absolute;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(74, 111, 165, 0.1);
+            animation: float-card 8s ease-in-out infinite;
+            opacity: 0.9;
+            z-index: 2;
+        }
+        
+        .floating-card-1 {
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .floating-card-2 {
+            top: 60%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+        
+        .floating-card-3 {
+            top: 30%;
+            right: 5%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float-card {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        
+        .stats-badge {
+            background: linear-gradient(135deg, #4a6fa5, #6b7b8c);
+            color: white;
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(74, 111, 165, 0.3);
+        }
+        
+        .section-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: radial-gradient(#4a6fa5 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- قسم آراء العملاء -->
+    <section id="testimonials" class="relative py-20 px-4 sm:px-6 lg:px-8 gradient-bg overflow-hidden">
+        <!-- النمط الخلفي -->
+        <div class="section-pattern"></div>
+        
+        <!-- البطاقات العائمة -->
+        <div class="floating-testimonials">
+            <div class="floating-card floating-card-1">
+                <div class="text-center">
+                    <div class="text-2xl font-black text-blue-600">٩٨٪</div>
+                    <div class="text-sm text-gray-600">رضا العملاء</div>
+                </div>
+            </div>
+            <div class="floating-card floating-card-2">
+                <div class="text-center">
+                    <div class="text-2xl font-black text-green-600">٥٠٠٠+</div>
+                    <div class="text-sm text-gray-600">عميل سعيد</div>
+                </div>
+            </div>
+            <div class="floating-card floating-card-3">
+                <div class="text-center">
+                    <div class="text-2xl font-black text-purple-600">٤.٩</div>
+                    <div class="text-sm text-gray-600">تقييم عام</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- العنوان الرئيسي -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-2 mb-6">
+                    <span class="stats-badge">
+                        <i class="fas fa-comment-dots ml-2"></i>
+                        آراء العملاء
+                    </span>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                    ماذا يقول عملاؤنا
+                    <span class="block text-blue-600">في جدة</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    استمع إلى تجارب عملائنا السعداء الذين اختاروا لمعة كلين لتحويل مساحاتهم إلى أماكن متألقة
+                </p>
+            </div>
+
+            <!-- قائمة آراء العملاء -->
+            <div class="space-y-6">
+                <!-- رأي 1 -->
+                <div class="testimonial-item" data-testimonial="1">
+                    <div class="testimonial-header">
+                        <div class="flex items-center gap-4">
+                            <div class="client-avatar bg-gradient-to-br from-blue-500 to-blue-600">
+                                أ
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-2">
+                                    <h3 class="text-xl font-black text-gray-900">أحمد السبيعي</h3>
+                                    <span class="text-blue-600 text-sm bg-blue-50 px-3 py-1 rounded-full">حي الصفا</span>
+                                </div>
+                                <div class="stars-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-arrow text-blue-600">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-text pt-4">
+                            "خدمة رائعة وفريق محترف. منزلي أصبح يلمع كالجديد بعد تنظيف شامل من لمعة كلين. 
+                            ما أثار إعجابي هو الاهتمام بالتفاصيل الدقيقة والمواد الآمنة التي استخدموها. 
+                            أنصح الجميع في جدة بتجربة خدماتهم، فهم يستحقون أكثر من 5 نجوم!"
+                        </div>
+                        <div class="flex items-center gap-4 mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2 text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="text-sm font-medium">تمت الخدمة: تنظيف منزل شامل</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-blue-600">
+                                <i class="fas fa-clock"></i>
+                                <span class="text-sm font-medium">ديسمبر 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 2 -->
+                <div class="testimonial-item" data-testimonial="2">
+                    <div class="testimonial-header">
+                        <div class="flex items-center gap-4">
+                            <div class="client-avatar bg-gradient-to-br from-green-500 to-green-600">
+                                ف
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-2">
+                                    <h3 class="text-xl font-black text-gray-900">فاطمة الحربي</h3>
+                                    <span class="text-green-600 text-sm bg-green-50 px-3 py-1 rounded-full">حي الروضة</span>
+                                </div>
+                                <div class="stars-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-arrow text-green-600">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-text pt-4">
+                            "الاهتمام بالتفاصيل ممتاز. نظافة شاملة ودقيقة لكل ركن في المنزل. 
+                            فريق العمل محترف ومحترم، واستخدموا مواد تنظيف آمنة للأطفال. 
+                            الأسعار معقولة جداً مقارنة بالجودة المقدمة. سأكرر التجربة بالتأكيد!"
+                        </div>
+                        <div class="flex items-center gap-4 mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2 text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="text-sm font-medium">تمت الخدمة: تنظيف مفروشات وسجاد</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-blue-600">
+                                <i class="fas fa-clock"></i>
+                                <span class="text-sm font-medium">نوفمبر 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 3 -->
+                <div class="testimonial-item" data-testimonial="3">
+                    <div class="testimonial-header">
+                        <div class="flex items-center gap-4">
+                            <div class="client-avatar bg-gradient-to-br from-purple-500 to-purple-600">
+                                م
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-2">
+                                    <h3 class="text-xl font-black text-gray-900">محمد الغامدي</h3>
+                                    <span class="text-purple-600 text-sm bg-purple-50 px-3 py-1 rounded-full">حي الزهراء</span>
+                                </div>
+                                <div class="stars-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-arrow text-purple-600">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-text pt-4">
+                            "تنظيف المكاتب كان استثنائياً. الفريق محترف ولا يتعارض مع سير العمل. 
+                            نظفوا المكاتب والمناطق المشتركة بدقة متناهية، واستخدموا معدات متطورة. 
+                            السعر مناسب والخدمة سريعة. شكراً لمعة كلين على جعل بيئة العمل أكثر إنتاجية!"
+                        </div>
+                        <div class="flex items-center gap-4 mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2 text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="text-sm font-medium">تمت الخدمة: تنظيف مكاتب احترافي</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-blue-600">
+                                <i class="fas fa-clock"></i>
+                                <span class="text-sm font-medium">يناير 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- رأي 4 -->
+                <div class="testimonial-item" data-testimonial="4">
+                    <div class="testimonial-header">
+                        <div class="flex items-center gap-4">
+                            <div class="client-avatar bg-gradient-to-br from-orange-500 to-orange-600">
+                                ن
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-center gap-4 mb-2">
+                                    <h3 class="text-xl font-black text-gray-900">نورة القحطاني</h3>
+                                    <span class="text-orange-600 text-sm bg-orange-50 px-3 py-1 rounded-full">حي النزهة</span>
+                                </div>
+                                <div class="stars-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-arrow text-orange-600">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-text pt-4">
+                            "تجربة رائعة مع تنظيف ما بعد البناء. الفريق أزال كل آثار الغبار والدهانات 
+                            باحترافية شديدة. المساحة أصبحت جاهزة للسكن فوراً. 
+                            أنصح كل من يبني منزلاً جديداً بالتعامل مع لمعة كلين، فهم الأفضل في جدة!"
+                        </div>
+                        <div class="flex items-center gap-4 mt-6 pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2 text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="text-sm font-medium">تمت الخدمة: تنظيف ما بعد البناء</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-blue-600">
+                                <i class="fas fa-clock"></i>
+                                <span class="text-sm font-medium">فبراير 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- إحصائيات إضافية -->
+            <div class="text-center mt-16">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-blue-600">٩٨٪</div>
+                        <div class="text-gray-600 text-sm">رضا العملاء</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-green-600">٥٠٠٠+</div>
+                        <div class="text-gray-600 text-sm">عميل سعيد</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-purple-600">٤.٩/٥</div>
+                        <div class="text-gray-600 text-sm">تقييم عام</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-black text-orange-600">٩٩٪</div>
+                        <div class="text-gray-600 text-sm">عملاء متكررين</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // تفعيل نظام التبديل للآراء
+        document.querySelectorAll('.testimonial-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const testimonialItem = header.parentElement;
+                const isActive = testimonialItem.classList.contains('active');
+                
+                // إغلاق جميع العناصر النشطة
+                document.querySelectorAll('.testimonial-item.active').forEach(item => {
+                    if (item !== testimonialItem) {
+                        item.classList.remove('active');
+                    }
+                });
+                
+                // تبديل الحالة للعنصر الحالي
+                testimonialItem.classList.toggle('active', !isActive);
+            });
+        });
+
+        // فتح أول رأي تلقائياً
+        document.querySelector('.testimonial-item').classList.add('active');
+
+        // إضافة تأثيرات عند التمرير
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const testimonialObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.testimonial-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            testimonialObserver.observe(item);
+        });
+    </script>
+</body>
+</html>
