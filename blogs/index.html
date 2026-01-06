@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع المدونات والمقالات | لمعة كلين | دليل شامل للتنظيف والتعقيم في المملكة</title>
+    <meta name="description" content="الصفحة الرئيسية لجميع مدونات ومقالات لمعة كلين عن التنظيف، التعقيم، النظافة، والعناية بالمنازل في جدة، الرياض، ومكة وجميع مدن المملكة العربية السعودية">
+    <meta name="keywords" content="مدونات تنظيف, مقالات تعقيم, نصائح نظافة, مقالات لمعة كلين, مدونة تنظيف جدة, مدونة تنظيف الرياض, مقالات تنظيف المنازل, مدونة النظافة, نصائح التنظيف, تعليمات التعقيم">
+    <meta name="author" content="لمعة كلين - شركة تنظيف وتعقيم متكاملة">
+    <link rel="canonical" href="https://lama-clean.com/المدونات">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #2867ed 0%, #2867ed 100%);
+        }
+        .blog-card {
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 10;
+        }
+        .category-filter .active {
+            background-color: #2867ed;
+            color: white;
+        }
+        .search-box {
+            position: relative;
+        }
+        .search-box input {
+            padding-right: 50px;
+        }
+        .search-box button {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+        }
+        .pagination .page-item.active {
+            background-color: #2867ed;
+            color: white;
+        }
+        .article-count {
+            font-size: 0.9rem;
+            color: #666;
+            margin-right: 10px;
+        }
+        .read-time {
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+        .trending-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .featured-article {
+            grid-column: span 2;
+        }
+        @media (max-width: 768px) {
+            .featured-article {
+                grid-column: span 1;
+            }
+        }
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #2867ed, #2867ed);
+            color: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .subscribe-box {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #2867ed;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .back-to-top.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    
+    <!-- شريط التنقل -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                
+                <!-- الشعار -->
+                <a href="https://lama-clean.com" class="flex items-center">
+                    <div class="w-12 h-12 m-1 rounded-full border p-1 flex items-center justify-center mr-3">
+                        <img src="../../asstes/img/logo.png" alt="شعار لمعة كلين - مكتبة المقالات">                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">لمعة كلين</h1>
+                        <p class="text-xs text-gray-500">مكتبة المقالات الشاملة</p>
+                    </div>
+                </a>
+
+                <!-- روابط القائمة -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="https://lama-clean.com" class="text-gray-700 hover:text-[#2867ed] transition px-4">الرئيسية</a>
+                    <a href="https://lama-clean.com#about" class="text-gray-700 hover:text-[#2867ed] transition">من نحن</a>
+                    <a href="https://lama-clean.com#services" class="text-gray-700 hover:text-[#2867ed] transition">الخدمات</a>
+                    <a href="https://lama-clean.com/المدونات" class="text-[#2867ed] font-bold transition">المدونات</a>
+                </div>
+
+                <!-- زر تواصل معنا -->
+                <div class="flex items-center">
+                    <a href="tel:0592425757" class="bg-[#2867ed] hover:bg-[#d68900] text-white font-bold py-2 px-6 rounded-lg transition duration-300 hidden md:block">
+                        <i class="fas fa-phone ml-2"></i> 0592425757
+                    </a>
+                    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- القائمة المنسدلة -->
+            <div id="mobile-menu" class="hidden flex-col space-y-4 mt-4 pb-4 md:hidden">
+                <a href="https://lama-clean.com" class="block text-gray-700 hover:text-[#2867ed] transition">الرئيسية</a>
+                <a href="https://lama-clean.com#about" class="block text-gray-700 hover:text-[#2867ed] transition">من نحن</a>
+                <a href="https://lama-clean.com#features" class="block text-gray-700 hover:text-[#2867ed] transition">الخدمات</a>
+                <a href="https://lama-clean.com/المدونات" class="block text-[#2867ed] font-bold transition">المدونات</a>
+                <a href="tel:0592425757" class="block text-gray-700 hover:text-[#2867ed] transition">اتصل: 0592425757</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">مكتبة مقالات لمعة كلين الشاملة</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">اكثر من 50 مقال متخصص في التنظيف، التعقيم، النظافة، والعناية بالمنازل في جميع مدن المملكة</p>
+            
+            <!-- شريط البحث -->
+            <div class="max-w-2xl mx-auto">
+                <div class="search-box">
+                    <input type="text" 
+                           placeholder="ابحث في المقالات (تنظيف، تعقيم، نصائح...)" 
+                           class="w-full py-4 px-6 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2867ed]">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- إحصائيات -->
+            <div class="flex flex-wrap justify-center gap-6 mt-12">
+                <div class="text-center">
+                    <div class="text-3xl font-bold">50+</div>
+                    <div class="text-sm opacity-90">مقال متخصص</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold">10+</div>
+                    <div class="text-sm opacity-90">فئة رئيسية</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold">15+</div>
+                    <div class="text-sm opacity-90">خبير وناشر</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold">100k+</div>
+                    <div class="text-sm opacity-90">قارئ شهرياً</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="py-12">
+        <div class="container mx-auto px-4">
+            
+            <!-- فئات المقالات -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">تصفح حسب الفئة</h2>
+                <div class="category-filter flex flex-wrap gap-3">
+                    <button class="category-btn active px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="all">
+                        جميع المقالات
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="cleaning">
+                        تنظيف المنازل
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="disinfection">
+                        تقنيات التعقيم
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="furniture">
+                        تنظيف المفروشات
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="offices">
+                        تنظيف المكاتب
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="tips">
+                        نصائح وإرشادات
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="products">
+                        منتجات التنظيف
+                    </button>
+                    <button class="category-btn px-6 py-3 bg-white rounded-full shadow hover:shadow-md transition" data-category="seasonal">
+                        نصائح موسمية
+                    </button>
+                </div>
+            </div>
+
+            <!-- المقال المميز -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">✨ المقال المميز لهذا الأسبوع</h2>
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden blog-card featured-article">
+                    <div class="md:flex">
+                        <div class="md:w-5/12 relative">
+                            <img src="https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تقنيات التعقيم الحديثة" 
+                                 class="w-full h-64 md:h-full object-cover">
+                            <span class="trending-badge">الأكثر قراءة هذا الأسبوع</span>
+                        </div>
+                        <div class="md:w-7/12 p-8">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-[#2867ed] text-white text-sm py-1 px-3 rounded-full">
+                                    تقنيات التعقيم
+                                </span>
+                                <span class="text-gray-500 text-sm mr-4">
+                                    <i class="far fa-clock ml-1"></i> 25 ديسمبر 2025
+                                </span>
+                            </div>
+
+                            <h3 class="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+                                أحدث تقنيات التعقيم الحديثة لمنازل جدة وجميع مدن المملكة
+                            </h3>
+
+                            <p class="text-gray-600 mb-6 text-lg">
+                                دليل شامل لأحدث تقنيات التعقيم: البخار، الضباب، الأشعة فوق البنفسجية، والأوزون. 
+                                اكتشف كيف تحمي عائلتك في جدة، الرياض، مكة، وجميع مدن المملكة العربية السعودية.
+                            </p>
+
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                         alt="د. أحمد الجهني" 
+                                         class="author-avatar mr-3">
+                                    <div>
+                                        <p class="font-medium">د. أحمد الجهني</p>
+                                        <p class="text-sm text-gray-500">خبير تعقيم معتمد</p>
+                                    </div>
+                                </div>
+                                <a href="./modern-sterilization-techniques-for-Jeddah-homes/index.html" 
+                                   class="text-[#2867ed] font-bold hover:text-[#d68900] transition flex items-center">
+                                    اقرأ المقال الكامل
+                                    <i class="fas fa-arrow-left mr-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- جميع المقالات -->
+            <div class="mb-12">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800">📚 جميع المقالات</h2>
+                    <div class="flex items-center">
+                        <span class="article-count">عرض 1-12 من 50 مقال</span>
+                        <select class="px-4 py-2 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2867ed]">
+                            <option>الأحدث أولاً</option>
+                            <option>الأقدم أولاً</option>
+                            <option>الأكثر قراءة</option>
+                            <option>الأعلى تقييماً</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- شبكة المقالات -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+                    
+                    <!-- المقال 1 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="cleaning">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف المنازل في جدة" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                                تنظيف المنازل
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 7 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    2,540 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                الدليل الشامل لتنظيف وتعقيم المنازل في جدة
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                كل ما تحتاج معرفته للحفاظ على منزل نظيف وصحي في مدينة جدة مع أفضل الممارسات والنصائح الاحترافية.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="أمين الشريف" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">أمين الشريف</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 2 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="disinfection">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تقنيات التعقيم الحديثة" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                                تقنيات التعقيم
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 10 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    3,210 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                تقنيات التعقيم بالبخار: المستقبل في جدة وكل المملكة
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                كيف تحول تقنية البخار عالي الحرارة عملية التعقيم في منازل ومكاتب جدة والرياض ومكة وجميع المدن.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="د. أحمد الجهني" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">د. أحمد الجهني</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 3 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="furniture">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف المفروشات" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-purple-500 text-white px-3 py-1 rounded-full text-sm">
+                                تنظيف المفروشات
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 8 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    1,850 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                أسرار تنظيف المفروشات في منازل جدة الحارة
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                كيفية الحفاظ على السجاد، الكنب، والستائر في مناخ جدة الحار والرطب. نصائح من خبراء لمعة كلين.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="أمين الشريف" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">أمين الشريف</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 4 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="offices">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف المكاتب" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">
+                                تنظيف المكاتب
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 9 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    2,100 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                تأثير نظافة المكاتب على إنتاجية الموظفين في الرياض
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                دراسة كاملة عن كيف تؤثر بيئة العمل النظيفة على كفاءة الموظفين في شركات ومكاتب الرياض.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="د. أحمد الجهني" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">د. أحمد الجهني</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 5 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="tips">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="نصائح تنظيف" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+                                نصائح وإرشادات
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 6 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    3,500 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                20 خطأ شائع في تنظيف المنازل وكيف تتجنبها
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                أخطاء يرتكبها معظم الناس أثناء تنظيف منازلهم في جدة والرياض تؤدي إلى تلف الأسطح والأثاث.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="أمين الشريف" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">أمين الشريف</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 6 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="products">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1585771724684-382b1b0f2c8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="منتجات التنظيف" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-teal-500 text-white px-3 py-1 rounded-full text-sm">
+                                منتجات التنظيف
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 7 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    1,750 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                دليل اختيار منتجات التنظيف الآمنة للأطفال في المنازل
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                كيف تختار مواد تنظيف آمنة لا تضر بصحة أطفالك في منازل جدة، الرياض، ومكة وجميع المدن.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="د. أحمد الجهني" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">د. أحمد الجهني</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 7 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="seasonal">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف المطابخ" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-orange-500 text-white px-3 py-1 rounded-full text-sm">
+                                نصائح موسمية
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 8 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    2,300 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                تنظيف شامل قبل رمضان: استعدادات منازل جدة والرياض
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                برنامج متكامل لتنظيف المنزل قبل شهر رمضان المبارك في جميع مدن المملكة العربية السعودية.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="أمين الشريف" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">أمين الشريف</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 8 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="cleaning">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف الشقق" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                                تنظيف المنازل
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 6 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    1,900 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                تنظيف الشقق الصغيرة في الرياض: حلول ذكية للمساحات المحدودة
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                استراتيجيات مبتكرة لتنظيف الشقق والمساحات الصغيرة في مدينة الرياض بأقل وقت وجهد.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="د. أحمد الجهني" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">د. أحمد الجهني</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 9 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="disinfection">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تعقيم الخزانات" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                                تقنيات التعقيم
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 7 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    2,800 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                تعقيم خزانات المياه في جدة: حماية صحتك من التلوث
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                لماذا وكيف ومتى يجب تعقيم خزانات المياه في منازل جدة للحفاظ على نقاوة وسلامة مياه الشرب.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="أمين الشريف" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">أمين الشريف</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 10 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="furniture">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف ما بعد البناء" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-purple-500 text-white px-3 py-1 rounded-full text-sm">
+                                تنظيف المفروشات
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 9 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    1,650 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                تنظيف شامل لما بعد البناء والتجديدات في المنازل
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                خطوات احترافية لإزالة آثار البناء والغبار من المنازل الجديدة في جدة والرياض وجميع المدن.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="د. أحمد الجهني" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">د. أحمد الجهني</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 11 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="offices">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="تنظيف الشركات" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">
+                                تنظيف المكاتب
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 8 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    2,400 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                برنامج تنظيف المكاتب اليومي والأسبوعي في جدة
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                كيف تحافظ على نظافة مكاتبك في جدة مع أقل تكلفة وجهد. دليل شامل للمديرين والمسؤولين.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="أمين الشريف" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">أمين الشريف</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- المقال 12 -->
+                    <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden" data-category="tips">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="التنظيف الذكي" 
+                                 class="w-full h-48 object-cover">
+                            <span class="category-badge bg-red-500 text-white px-3 py-1 rounded-full text-sm">
+                                نصائح وإرشادات
+                            </span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-gray-500 text-sm">
+                                    <i class="far fa-clock ml-1"></i> 7 دقائق
+                                </span>
+                                <span class="text-gray-500 text-sm">
+                                    3,100 قراءة
+                                </span>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-3 text-gray-800">
+                                10 أدوات تنظيف ذكية توفر 50% من وقتك وجهدك
+                            </h3>
+                            
+                            <p class="text-gray-600 mb-4">
+                                اكتشف أحدث الأدوات والتقنيات التي تجعل عملية التنظيف في منزلك أسهل وأسرع في جميع المدن.
+                            </p>
+                            
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full overflow-hidden mr-2">
+                                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+                                             alt="د. أحمد الجهني" 
+                                             class="w-full h-full object-cover">
+                                    </div>
+                                    <span class="text-sm text-gray-600">د. أحمد الجهني</span>
+                                </div>
+                                <a href="#" class="text-[#2867ed] text-sm font-bold hover:text-[#d68900]">
+                                    اقرأ المزيد →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- الترقيم -->
+            <div class="flex justify-center mb-12">
+                <div class="flex space-x-2">
+                    <button class="page-item px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">السابق</button>
+                    <button class="page-item active px-4 py-2 bg-[#2867ed] text-white border border-[#2867ed] rounded-lg">1</button>
+                    <button class="page-item px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">2</button>
+                    <button class="page-item px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">3</button>
+                    <button class="page-item px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">4</button>
+                    <span class="px-4 py-2">...</span>
+                    <button class="page-item px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">5</button>
+                    <button class="page-item px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">التالي</button>
+                </div>
+            </div>
+
+            <!-- قسم الاشتراك -->
+            <div class="subscribe-box mb-12">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">📬 لا تفوت أي مقال جديد</h3>
+                    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">اشترك في نشرتنا البريدية لتصلك أحدث المقالات، النصائح، والعروض الخاصة من لمعة كلين مباشرة إلى بريدك الإلكتروني</p>
+                    
+                    <form class="max-w-lg mx-auto flex flex-col md:flex-row gap-4">
+                        <input type="email" 
+                               placeholder="بريدك الإلكتروني" 
+                               class="flex-grow px-6 py-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2867ed]">
+                        <button type="submit" 
+                                class="bg-[#2867ed] hover:bg-[#d68900] text-white font-bold py-4 px-8 rounded-lg transition duration-300">
+                            اشترك الآن
+                        </button>
+                    </form>
+                    
+                    <p class="text-sm text-gray-500 mt-4">نعد بعدم مشاركة بريدك مع أي طرف ثالث. يمكنك إلغاء الاشتراك في أي وقت.</p>
+                </div>
+            </div>
+
+           
+        </div>
+    </main>
+
+  
+
+    <!-- الفوتر -->
+
+  <footer class="relative gradient-bg text-white pt-16 pb-8 overflow-hidden"style = "background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%)">
+
+
+    <!-- الفقاعات العائمة -->
+    <div class="floating-bubble w-6 h-6 top-20 left-1/4" style="animation-delay: 0s;"></div>
+    <div class="floating-bubble w-4 h-4 top-32 right-1/3" style="animation-delay: 2s;"></div>
+    <div class="floating-bubble w-8 h-8 bottom-40 left-1/2" style="animation-delay: 4s;"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- القسم العلوي -->
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-12">
+        <!-- معلومات الشركة -->
+        <div class="lg:col-span-2">
+          <div class="flex items-start gap-4 mb-6">
+            <div class="w-14 h-12 px-1 rounded-xl bg-white flex items-center justify-center text-white logo-glow">
+              <img src="../asstes/img/logo.png" alt="">
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold">لمعة كلين</h3>
+              <p class="text-blue-300 text-sm font-medium">جدة - المملكة العربية السعودية</p>
+            </div>
+          </div>
+          <p class="text-gray-300 leading-relaxed mb-6 max-w-md">
+            نقدم خدمات تنظيف استثنائية تجعل مساحتك تلمع بروعة وجمال في مدينة جدة. نحن نستخدم أحدث التقنيات ومواد
+            التنظيف الآمنة لضمان بيئة نظيفة وصحية.
+          </p>
+
+          <!-- معلومات الاتصال -->
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-gray-300">
+              <i class="fas fa-phone text-blue-400"></i>
+              <span>0592425757</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-300">
+              <i class="fas fa-envelope text-blue-400"></i>
+              <span>info@lamaaclean.com</span>
+            </div>
+            <div class="flex items-center gap-3 text-gray-300">
+              <i class="fas fa-map-marker-alt text-blue-400"></i>
+              <span>جدة - حي السلامة - شارع الملك فهد</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- روابط سريعة -->
+        <div>
+          <h4 class="text-lg font-bold mb-6 pb-2 border-b border-gray-700">روابط سريعة</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="footer-link text-gray-300 hover:text-white block">الرئيسية</a></li>
+            <li><a href="#services" class="footer-link text-gray-300 hover:text-white block">خدماتنا</a></li>
+            <li><a href="#about" class="footer-link text-gray-300 hover:text-white block">من نحن</a></li>
+            <li><a href="#pricing" class="footer-link text-gray-300 hover:text-white block">الباقات</a></li>
+            <li><a href="#contact" class="footer-link text-gray-300 hover:text-white block">اتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <!-- خدماتنا -->
+        <div>
+          <h4 class="text-lg font-bold mb-6 pb-2 border-b border-gray-700">خدماتنا</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="footer-link text-gray-300 hover:text-white block">تنظيف المنازل</a></li>
+            <li><a href="#" class="footer-link text-gray-300 hover:text-white block">تنظيف الفلل</a></li>
+            <li><a href="#" class="footer-link text-gray-300 hover:text-white block">تنظيف الشقق</a></li>
+            <li><a href="#" class="footer-link text-gray-300 hover:text-white block">تنظيف المكاتب والشركات</a></li>
+            <li><a href="#" class="footer-link text-gray-300 hover:text-white block"> تنظيف الشركات </a></li>
+          </ul>
+        </div>
+
+        <!-- النشرة البريدية -->
+        <div>
+          <h4 class="text-lg font-bold mb-6 pb-2 border-b border-gray-700">النشرة البريدية</h4>
+          <p class="text-gray-300 mb-4">اشترك في نشرتنا البريدية لتصلك أحدث العروض والتخفيضات</p>
+          <form class="space-y-3">
+            <input type="email" placeholder="بريدك الإلكتروني"
+              class="w-full px-4 py-3 rounded-lg newsletter-input text-white placeholder-gray-400 focus:outline-none">
+            <button type="submit"
+              class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+              اشترك الآن
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- القسم الأوسط -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-t border-b border-gray-700">
+        <!-- وسائل التواصل -->
+        <div>
+          <h4 class="text-lg font-bold mb-4">تابعنا على</h4>
+          <div class="flex gap-3">
+            <a href="#"
+              class="social-icon w-12 h-12 rounded-full bg-gray-800 hover:bg-blue-500 flex items-center justify-center text-white">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#"
+              class="social-icon w-12 h-12 rounded-full bg-gray-800 hover:bg-pink-500 flex items-center justify-center text-white">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#"
+              class="social-icon w-12 h-12 rounded-full bg-gray-800 hover:bg-yellow-400 flex items-center justify-center text-white">
+              <i class="fab fa-snapchat"></i>
+            </a>
+            <a href="#"
+              class="social-icon w-12 h-12 rounded-full bg-gray-800 hover:bg-black flex items-center justify-center text-white">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="#"
+              class="social-icon w-12 h-12 rounded-full bg-gray-800 hover:bg-red-500 flex items-center justify-center text-white">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- القسم السفلي -->
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8">
+        <div class="text-gray-400 text-center md:text-right mb-4 md:mb-0">
+          <p>© 2024 لمعة كلين - جدة. جميع الحقوق محفوظة.</p>
+        </div>
+
+        <div class="flex gap-6 text-sm">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">سياسة الخصوصية</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">شروط الاستخدام</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">الأسئلة الشائعة</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- زر العودة للأعلى -->
+    <div id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // تصفية المقالات حسب الفئة
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // إزالة النشط من جميع الأزرار
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // إضافة النشط للزر المحدد
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                const articles = document.querySelectorAll('#articles-grid .blog-card');
+                
+                if (category === 'all') {
+                    articles.forEach(article => {
+                        article.style.display = 'block';
+                    });
+                } else {
+                    articles.forEach(article => {
+                        if (article.getAttribute('data-category') === category) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        // زر العودة للأعلى
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // بحث بسيط
+        const searchInput = document.querySelector('.search-box input');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const articles = document.querySelectorAll('#articles-grid .blog-card');
+            
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const description = article.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+
+        // تفعيل الترقيم
+        document.querySelectorAll('.page-item').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.page-item').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+
+        // إعدادات Tailwind إضافية
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2867ed',
+                        secondary: '#d68900'
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
